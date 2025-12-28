@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wwpdb.apps.validation"
+dynamic = ["version"]
+description = 'Fake deployment of wwpdb.apps.validation to satisfy dependency for other packages'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+keywords = []
+authors = [
+  { name = "Ezra Peisach", email = "ezra.peisach@rcsb.org" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+#Documentation = "https://github.com/Ezra Peisach/wwpdb-apps-validation#readme"
+#Issues = "https://github.com/Ezra Peisach/wwpdb-apps-validation/issues"
+#Source = "https://github.com/Ezra Peisach/wwpdb-apps-validation"
+
+[tool.hatch.version]
+path = "wwpdb/apps/validation/__init__.py"
+
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/wwpdb",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["wwpdb"]
+
